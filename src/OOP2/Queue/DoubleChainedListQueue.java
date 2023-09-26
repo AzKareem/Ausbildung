@@ -1,4 +1,4 @@
-package OOP2;
+package OOP2.Queue;
 
 public class DoubleChainedListQueue {
 

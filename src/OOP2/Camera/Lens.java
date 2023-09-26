@@ -1,4 +1,4 @@
-package OOP2;
+package OOP2.Camera;
 
 public class Lens {
 
@@ -48,7 +48,7 @@ public class Lens {
 
 
     public String toString(){
-        return "OOP2.Lens minBrennweite: "+ minBrennweite + ", maxBrennweite: "+ maxBrennweite;
+        return "Lens minBrennweite: "+ minBrennweite + ", maxBrennweite: "+ maxBrennweite;
     }
 
 }

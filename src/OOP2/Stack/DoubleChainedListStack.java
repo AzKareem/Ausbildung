@@ -1,4 +1,4 @@
-package OOP2;
+package OOP2.Stack;
 
 public class DoubleChainedListStack {
 

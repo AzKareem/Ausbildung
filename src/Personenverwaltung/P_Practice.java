@@ -2,6 +2,7 @@ package Personenverwaltung;
 
 public class P_Practice {
     public static void main(String[] args) {
+
         Addresen address1 = new Addresen("Herrenstrasse", 5, 4020, "Linz");
         Addresen address2 = new Addresen("Figulystraße", 9, 4020, "Linz");
         Addresen address3 = new Addresen("Auwisenstraße", 11, 4020, "Linz");

@@ -1,4 +1,4 @@
-package OOP2;
+package OOP2.Camera;
 
 public class Camera {
 
@@ -75,7 +75,7 @@ public class Camera {
     }
 
     public String toString() {
-        return "OOP2.Camera brand: " + brand + ", megaPixels: " + megaPixels + ", displaySize: " + displaySize
+        return "Camera brand: " + brand + ", megaPixels: " + megaPixels + ", displaySize: " + displaySize
                 + ", colored: " + colored + ", lens: " + lens;
     }
 }
