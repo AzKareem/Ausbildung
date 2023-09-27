@@ -1,4 +1,4 @@
-package OOP2.Stack;
+package OOP2.Stack.Main;
 
 public class S_Practice {
     public static void main(String[] args) {

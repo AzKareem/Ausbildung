@@ -1,4 +1,4 @@
-package OOP2.Stack;
+package OOP2.Stack.Main;
 
 public class DoubleChainedListStack {
 
@@ -77,13 +77,18 @@ public class DoubleChainedListStack {
     }
 
     public int[] pop(int n) {
-        int[] poppedElements = new int[Math.min(n, size)];
-        for (int i = 0; i < poppedElements.length; i++) {
-            poppedElements[i] = pop();
+        if (n > size){
+            throw new IndexOutOfBoundsException("Index out of Bound! ");
+        }else{
+            int[] poppedElements = new int[Math.min(n, size)];
+            for (int i = 0; i < poppedElements.length; i++) {
+                poppedElements[i] = pop();
 
+            }
+
+            return poppedElements;
         }
 
-        return poppedElements;
     }
 
 

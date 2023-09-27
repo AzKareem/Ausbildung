@@ -1,11 +1,13 @@
-package OOP2.Queue;
+package OOP2.Queue.Main;
+
+import OOP2.Queue.Main.DoubleChainedListQueue;
 
 public class Q_Practice {
     public static void main(String[] args) {
 
 
 
-        DoubleChainedListQueue queue = new OOP2.Queue.DoubleChainedListQueue();
+        DoubleChainedListQueue queue = new DoubleChainedListQueue();
 
         queue.enqueue(1);
         queue.enqueue(2);

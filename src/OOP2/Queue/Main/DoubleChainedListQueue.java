@@ -1,4 +1,4 @@
-package OOP2.Queue;
+package OOP2.Queue.Main;
 
 public class DoubleChainedListQueue {
 
@@ -8,8 +8,8 @@ public class DoubleChainedListQueue {
         int newElement;
 
 
-      Queue next;
-      Queue previous;
+        Queue next;
+        Queue previous;
 
 
         private Queue(int newElement) {
@@ -50,7 +50,7 @@ public class DoubleChainedListQueue {
 
     public int dequeue() {
         if (isEmpty()) {
-            throw new NullPointerException("The Stack is empty! ");
+            throw new NullPointerException("The Queue is empty to dequeue! ");
         }
 
         int queueElements = head.newElement;
@@ -66,13 +66,18 @@ public class DoubleChainedListQueue {
     }
 
     public int[] dequeue(int n) {
-        int[] queuedElements = new int[Math.min(n, size)];
-        for (int i = 0; i < queuedElements.length; i++) {
-            queuedElements[i] = dequeue();
+        if (n > size) {
+            throw new IndexOutOfBoundsException("Index out of Bound! ");
+        } else {
+            int[] queuedElements = new int[Math.min(n, size)];
+            for (int i = 0; i < queuedElements.length; i++) {
+                queuedElements[i] = dequeue();
 
+            }
+
+            return queuedElements;
         }
 
-        return queuedElements;
     }
 
 
