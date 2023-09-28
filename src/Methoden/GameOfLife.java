@@ -9,6 +9,7 @@ public class GameOfLife {
         int[][] gameOfLife = new int[10][10];
         fillFields(gameOfLife);
         generation(gameOfLife, 10);
+
     }
 
     public static void fillFields(int[][] gameOfLife) {
