@@ -1,14 +1,15 @@
-package Personenverwaltung;
-
-import java.util.Objects;
+package Personenverwaltung.Main;
 
 public class Person {
-    String name;
+    public String name;
     String lastName;
     String birthday;
     Addresen address;
     Gender gender;
-    enum Gender {
+
+
+
+   public enum Gender {
         Male,
         Female
     }

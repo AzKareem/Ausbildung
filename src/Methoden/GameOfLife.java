@@ -5,11 +5,10 @@ import java.util.Random;
 
 public class GameOfLife {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int[][] gameOfLife = new int[10][10];
         fillFields(gameOfLife);
-        generation(gameOfLife, 10);
-
+        generation(gameOfLife, 5);
     }
 
     public static void fillFields(int[][] gameOfLife) {
@@ -36,13 +35,14 @@ public class GameOfLife {
         }
     }
 
-    public static void generation(int[][] gameOfLife, int countOfGeneration) {
+    public static void generation(int[][] gameOfLife, int countOfGeneration) throws InterruptedException {
 
         int[][] currentGeneration = gameOfLife;
         int[][] nextGeneration;
 
         for (int i = 0; i < countOfGeneration; i++) {
             nextGeneration = new int[10][10];
+            Thread.sleep(1000);
             output(currentGeneration);
             for (int j = 0; j < currentGeneration.length; j++) {
                 for (int k = 0; k < currentGeneration.length; k++) {

@@ -1,4 +1,4 @@
-package Personenverwaltung;
+package Personenverwaltung.Main;
 
 public class Addresen {
     int plz;
