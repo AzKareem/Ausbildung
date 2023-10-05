@@ -3,9 +3,9 @@ package Personenverwaltung.Main;
 public class P_Practice {
     public static void main(String[] args) {
 
-        Addresen address1 = new Addresen("Herrenstrasse", 5, 4020, "Linz");
-        Addresen address2 = new Addresen("Figulystraße", 9, 4020, "Linz");
-        Addresen address3 = new Addresen("Auwisenstraße", 11, 4020, "Linz");
+        Address address1 = new Address("Herrenstrasse", 5, 4020, "Linz");
+        Address address2 = new Address("Figulystraße", 9, 4020, "Linz");
+        Address address3 = new Address("Auwisenstraße", 11, 4020, "Linz");
 
         Personenverwaltung codersBay = new Personenverwaltung();
 

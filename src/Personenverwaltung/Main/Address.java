@@ -1,12 +1,12 @@
 package Personenverwaltung.Main;
 
-public class Addresen {
+public class Address {
     int plz;
     String location;
     String streetName;
     int houseNumber;
 
-   public Addresen(String streetName, int houseNumber, int plz, String location){
+   public Address(String streetName, int houseNumber, int plz, String location){
         this.streetName = streetName;
         this.houseNumber = houseNumber;
         this.plz = plz;

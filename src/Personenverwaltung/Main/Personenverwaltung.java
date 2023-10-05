@@ -5,18 +5,13 @@ import java.util.ArrayList;
 
 public class Personenverwaltung {
 
-    String name;
-    String lastName;
-    String birthday;
-    Addresen address;
-    Person.Gender gender;
     public static ArrayList<Person> personArrayList;
 
     public Personenverwaltung() {
         personArrayList = new ArrayList<>();
     }
 
-    public static void addPerson(Person person) {
+    public void addPerson(Person person) {
         personArrayList.add(person);
     }
 
@@ -26,8 +21,8 @@ public class Personenverwaltung {
         }
     }
 
-    public static void createPerson(String name, String lastName) {
-        if (containsNumber(name) || containsNumber(lastName)) {
+    public void createPerson(String name, String lastName) {
+        if (Util.containsNumber(name) || Util.containsNumber(lastName)) {
             throw new IllegalArgumentException("Name oder Nachname dürfen keine Zahlen enthalten.");
         }
         Person person = new Person(name, lastName);
@@ -35,8 +30,8 @@ public class Personenverwaltung {
     }
 
 
-    public void createPerson(String name, String lastName, String birthday, Addresen address, Person.Gender gender) {
-        if (containsNumber(name) || containsNumber(lastName)) {
+    public void createPerson(String name, String lastName, String birthday, Address address, Person.Gender gender) {
+        if (Util.containsNumber(name) || Util.containsNumber(lastName)) {
             throw new IllegalArgumentException("Name oder Nachname dürfen keine Zahlen enthalten.");
         }
         Person person = new Person(name, lastName, birthday, address, gender);
@@ -45,7 +40,7 @@ public class Personenverwaltung {
 
 
     public void createPerson(String name, String lastName, Person.Gender gender, String birthday) {
-        if (containsNumber(name) || containsNumber(lastName)) {
+        if (Util.containsNumber(name) || Util.containsNumber(lastName)) {
             throw new IllegalArgumentException("Name oder Nachname dürfen keine Zahlen enthalten.");
         }
         Person person = new Person(name, lastName, gender, birthday);
@@ -64,14 +59,7 @@ public class Personenverwaltung {
                 return name; // Return the found person
             }
         }
-
-
         throw new NullPointerException("Diese Person " + name + " exestiert nicht!");
-    }
-
-
-    private static boolean containsNumber(String str) {
-        return str != null && str.matches(".*\\d.*");
     }
 
     public void removePerson(String name) {
@@ -85,7 +73,6 @@ public class Personenverwaltung {
         }
         if (personToRemove != null) {
             personArrayList.remove(personToRemove);
-
         } else {
             throw new NullPointerException("Diese Person " + name + " exestiert nicht!");
         }
